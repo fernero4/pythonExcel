@@ -9,7 +9,7 @@ import pathlib
 
 
 root = Tk()
-root.title('Weather App')
+root.title('Excel save')
 root.geometry('890x470+300+300')
 root.configure(bg='#326273')
 root.resizable(False, False)
