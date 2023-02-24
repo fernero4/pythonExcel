@@ -3,10 +3,11 @@ from tkinter.ttk import Combobox
 import tkinter as tk
 from tkinter import messagebox
 import openpyxl
-import xlrd
 from openpyxl import Workbook
 import pathlib
 
+IMAG_PATH = 'C:/Users/ferna/Downloads/python/pythonExcel/Images/'
+file = pathlib.Path('C:/Users/ferna/Downloads/python/pythonExcel/backend_data.xlsx')
 
 root = Tk()
 root.title('Excel save')
@@ -14,8 +15,6 @@ root.geometry('890x470+300+300')
 root.configure(bg='#326273')
 root.resizable(False, False)
 
-IMAG_PATH = 'C:/Users/ferna/Downloads/python/pythonExcel/Images/'
-file = pathlib.Path('C:/Users/ferna/Downloads/python/pythonExcel/backend_data.xlsx')
 
 if file.exists():
     pass
@@ -72,8 +71,7 @@ Label(root, text='Please fill out this Entry form',
 
 # labels
 Label(root, text='Name', font=23, bg='#326273', fg='#fff').place(x=50, y=100)
-Label(root, text='Contact No.', font=23,
-      bg='#326273', fg='#fff').place(x=50, y=150)
+Label(root, text='Contact No.', font=23, bg='#326273', fg='#fff').place(x=50, y=150)
 Label(root, text='Age', font=23, bg='#326273', fg='#fff').place(x=50, y=200)
 Label(root, text='Gender', font=23, bg='#326273', fg='#fff').place(x=370, y=200)
 Label(root, text='Address', font=23, bg='#326273', fg='#fff').place(x=50, y=250)
