@@ -22,6 +22,8 @@ root.geometry('1250x700+210+100')
 root.configure(bg=background)
 root.resizable(False, False)
 
+
+
 if file.exists():
     pass
 else:
@@ -41,8 +43,11 @@ else:
     sheet['L1']="Mother's occupation"
     file.save('C:/Users/ferna/Downloads/python/pythonExcel/Student_data.xlsx')
 
+
+
 def Exit():
     root.destroy()
+
 
 def Show_image():
     global filename
@@ -54,6 +59,7 @@ def Show_image():
     photo2=ImageTk.PhotoImage(resized_image)
     lbl.config(image=photo2)
     lbl.image=photo2
+
 
 
 def Registration_no():
@@ -157,8 +163,6 @@ def Search_student():
             reg_no_position=str(t_row)[14:-1]
             reg_number=str(t_row)[15:-1]
 
-            #reg_no_position A1 A2 A3
-            #reg_number  1 2 3
 
     try:
         print(str(t_row))
@@ -204,6 +208,8 @@ def Search_student():
     photo2=ImageTk.PhotoImage(resized_image)
     lbl.config(image=photo2)
     lbl.image=photo2
+
+
 
 def Update():
     R1=registration.get()
@@ -267,9 +273,11 @@ def selection():
         return gender
 
 
+
 #Top frame
 Label(root, text="Email: hortafer02@gmail.com", width=10, height=3, bg="#f0687c", anchor="e").pack(side=TOP, fill=X)
 Label(root, text="STUDENT REGISTRATION", width=10, height=2, bg="#c36464", fg="#fff", font="arial 20 bold").pack(side=TOP, fill=X)
+
 
 
 
@@ -297,8 +305,8 @@ reg_entry.place(x=160, y=150)
 
 
 
-
 Registration_no()
+
 
 today=datetime.today()
 d1= today.strftime("%d/%m/%Y")
@@ -394,18 +402,12 @@ lbl.place(x=0, y=0)
 
 
 #button
-
 Button(root, text="Upload", width=19, height=2, font="arial 12 bold", bg="lightblue", command=Show_image).place(x=1000, y=370)
 saveButton=Button(root, text="Save", width=19, height=2, font="arial 12 bold", bg="lightgreen", command=Save)
 saveButton.place(x=1000, y=450)
 
 Button(root, text="Reset", width=19, height=2, font="arial 12 bold", bg="lightpink", command=Clear).place(x=1000, y=530)
 Button(root, text="Exit", width=19, height=2, font="arial 12 bold", bg="grey", command=Exit).place(x=1000, y=610)
-
-
-
-
-
 
 
 root.mainloop()
